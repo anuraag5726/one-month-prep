@@ -1,0 +1,2 @@
+ double num=Math.pow(2,32)-1;
+   return (long)num-n;
