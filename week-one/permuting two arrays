@@ -1,0 +1,16 @@
+ public static String twoArrays(int k, List<Integer> A, List<Integer> B) {
+    Collections.sort(A);
+    boolean flag=true;
+    Collections.sort(B,Collections.reverseOrder());
+    List<Integer> li = new  ArrayList<>();
+     for(int i=0;i<A.size();i++){
+         li.add(A.get(i)+B.get(i));
+     }
+       for(int x: li){
+           if(x<k){ return "NO";}
+          }
+          return "YES";
+      
+    }
+
+}
