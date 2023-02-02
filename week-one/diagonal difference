@@ -1,0 +1,13 @@
+ int sum1=0,sum2=0;
+  int sz=arr.get(0).size();
+  for(int i=0;i<sz;i++){
+      sum1+=(arr.get(i).get(i));
+  }
+  int j=sz-1,k=0;
+  while(j>=0 && k<sz ){
+      sum2+=arr.get(j).get(k);
+      j--;
+      k++;
+      
+  }
+  return Math.abs(sum1-sum2);
