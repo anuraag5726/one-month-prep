@@ -1,0 +1,15 @@
+class Result {
+    public static int count(int num,List<Integer> li){
+        int cnt=0;
+        for(int x: li){
+            if(num==x)cnt++;
+        }
+        return cnt;
+    }
+    public static List<Integer> countingSort(List<Integer> arr) {
+   List<Integer> li = new ArrayList<>();
+   for(int i=0;i<100;i++){
+       li.add(count(i,arr));
+   }
+    return li;
+    }
