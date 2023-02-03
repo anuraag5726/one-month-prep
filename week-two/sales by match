@@ -1,0 +1,26 @@
+ public static int  count(int num,List<Integer> li){
+     int c=0;
+     for(int x:li){
+         if(num==x)c++;
+     }
+     return c;
+ }
+    public static int sockMerchant(int n, List<Integer> ar) {
+      int sum=0;
+      Set<Integer> set= new HashSet<>(ar);
+      Collections.sort(ar);
+      for(int nm :set){
+          int cnt=count(nm,ar);
+          if(cnt%2==1){
+              cnt=cnt-1;
+              sum+=cnt;
+          }
+          else{
+              sum+=cnt;
+          }
+      }
+    
+      return sum/2;
+    }
+
+}
