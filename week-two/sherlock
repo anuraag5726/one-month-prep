@@ -1,0 +1,11 @@
+int total=0;
+          int rit=0;
+          for(int i=0;i<arr.size();i++){
+              total+=arr.get(i);
+          }
+          for(int i=0;i<arr.size();i++){
+              if(rit==total-rit-arr.get(i))return "YES";
+               rit+=arr.get(i);
+          }
+          return "NO";
+    }
