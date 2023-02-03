@@ -1,0 +1,25 @@
+class Result {
+   public static String caesarCipher(String s, int k) {
+     String res="";
+     for(int i=0;i<s.length();i++){
+         int cval=(int)s.charAt(i);
+         if(cval>=65 && cval<=90){
+             cval+=k%26;
+             if(cval>90){
+                 cval=cval-26;
+             }
+         }
+         else if(cval>96 && cval<=122){
+             cval+=k%26;
+             if(cval>122){
+                 cval=cval-26;
+             }
+         }
+         res+=(char)cval;
+     }
+ 
+     return res;
+
+    }
+
+}
