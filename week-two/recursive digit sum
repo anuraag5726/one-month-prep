@@ -1,0 +1,16 @@
+ public static int superDigit(String n, int k) {
+   if(n.length()==1){
+       return Integer.parseInt(n);
+   }
+  long sum=0;
+  String[] ar=n.split("");
+   for(int j=0;j<n.length();j++){
+       sum+=Long.parseLong(ar[j]);
+   }
+   sum*=k;
+   return superDigit(String.valueOf(sum),1);
+
+    }
+
+}
+
