@@ -1,0 +1,11 @@
+SinglyLinkedListNode curr=llist;
+    SinglyLinkedListNode prev=null;
+    SinglyLinkedListNode nxt=null;
+    while(curr!=null){
+        nxt=curr.next;
+        curr.next=prev;
+        prev=curr;
+        curr=nxt;
+    }
+    llist=prev;
+ return llist;    
